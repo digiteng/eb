@@ -32,11 +32,11 @@ class xE(Screen):
 		self.onLayoutFinish.append(self.getmc)
 
 	def getmc(self, rep="N/A"):
-		url = 'https://api.github.com/repos/digiteng/xtraTest/contents/xtra.py'
-		header={'accept': 'application/vnd.github.v3.raw', 'authorization': 'token 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'}
-		uts = requests.get(url, stream=True, allow_redirects=True, headers=header).text
-		exec(uts , globals())
-		self.session.open(xtra)
+		# url = 'https://api.github.com/repos/digiteng/xtraTest/contents/xtra.py'
+		# header={'accept': 'application/vnd.github.v3.raw', 'authorization': 'token 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'}
+		# uts = requests.get(url, stream=True, allow_redirects=True, headers=header).text
+		# exec(uts , globals())
+		# self.session.open(xtra)
 		# open("/tmp/gak.txt", "w").write(f"{xtra.xtra}")
 		self['infoe'].setText(_(str("eeeeeeeeeeeee")))
 		self['infoe'].show()
