@@ -1,5 +1,3 @@
-print("test OK")
-a="bbb"
 
 import os
 
