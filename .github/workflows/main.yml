@@ -1,16 +1,18 @@
 jobs:
-  build:
+  run-script:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v4
+
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.x'
-      - name: Run script
+          python-version: '3.10'
+
+      - name: Run Python script
         env:
-          # Secret'ı bir ortam değişkenine atayın
-          MY_API_KEY: ${{ secrets.API_KEY }} 
+          # This maps the GitHub Secret to an environment variable
+          MY_API_KEY: ${{ secrets.API_KEY }}
         run: python t.py
-        env:
-          api_key: ${{ secrets.api_key }}
+
