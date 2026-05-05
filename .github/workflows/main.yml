@@ -1,31 +1,19 @@
-name: CI
-
+name: scrape
 on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
-
+  workflow_dispatch:
+  schedule:
+	- cron: '*/20 * * * *'
 jobs:
-  test:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-      - name: Install all necessary packages
-        run: pip install os
-      - name: Run script
-        env:
-          # This line maps the GitHub Secret to a local environment variable
-          API_KEY: ${{ secrets.API_KEY }}
-          API_KEYV: ${{ secrets.API_KEYV }}
-
-        run: python t.py
+  scrape:
+	runs-on: ubuntu-latest
+	steps:
+	  - name: Check out this repo
+		uses: actions/checkout@v2
+	  - name: Set up Python
+		uses: actions/setup-python@v2
+		with:
+		  python-version: '3.9'
+	  - name: Install all necessary packages
+		run: pip install requests os
+	  - name: Run the scraping script
+		run: python t.py
