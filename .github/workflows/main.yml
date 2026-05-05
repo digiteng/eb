@@ -1,0 +1,14 @@
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      - name: Run script
+        env:
+          # Secret'ı bir ortam değişkenine atayın
+          MY_API_KEY: ${{ secrets.API_KEY }} 
+        run: python t.py
