@@ -13,5 +13,6 @@ jobs:
 					python-version: '3.11'
 
 			- name: Run Python script
-				run: python t.py
+				run:
+					python t.py
 
