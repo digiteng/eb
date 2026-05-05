@@ -3,11 +3,11 @@ a="bbb"
 
 import os
 
-# Get the secret from environment variables
-api_key = os.environ.get('MY_API_KEY')
+# Retrieve the environment variable
+api_key = os.getenv("MY_API_KEY")
 
 if api_key:
-    print("API Key loaded successfully!")
-    # Use your key: response = requests.get(url, headers={"Authorization": f"Bearer {api_key}"})
+    print("API Key successfully loaded!")
+    # Use your key here
 else:
     print("Error: API Key not found.")
