@@ -41,6 +41,7 @@ class xE(Screen):
 		self['infoe'].show()
 		self.itimer.start(100, True)
 
+
 	def cdwn(self):
 		try:
 			if self.timeout > 0:
