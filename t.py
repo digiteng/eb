@@ -1,5 +1,5 @@
 
 import os
 
-API_KEY = os.getenv('API_KEYV')
-
+apikeyv = os.getenv('API_KEYV')
+print(apikeyv)
