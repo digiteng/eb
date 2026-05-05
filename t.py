@@ -4,6 +4,8 @@ from Components.Label import Label
 from enigma import eTimer
 from Components.ActionMap import ActionMap
 from Components.ProgressBar import ProgressBar
+import os
+api_key = os.environ.get('API_KEY')
 
 class xE(Screen):
 	skin = """
@@ -30,7 +32,7 @@ class xE(Screen):
 		self.onLayoutFinish.append(self.getmc)
 
 	def getmc(self, rep="N/A"):
-		self['infoe'].setText(_(str(rep)))
+		self['infoe'].setText(_(str(api_key)))
 		self['infoe'].show()
 		self.itimer.start(100, True)
 
