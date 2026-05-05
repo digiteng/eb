@@ -1,18 +1,24 @@
-env:
-	MY_API_KEY: ${{ secrets.API_KEY }}
+name: Run Python Script
+
+on: [push]
+
 jobs:
-	run-script:
-		runs-on: ubuntu-latest
-		steps:
-			- name: Checkout code
-				uses: actions/checkout@v4
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: [actions/checkout@v4](https://github.com)
 
-			- name: Set up Python
-				uses: actions/setup-python@v5
-				with:
-					python-version: '3.11'
+      - name: Set up Python
+        uses: [actions/setup-python@v5](https://github.com/actions/setup-python)
+        with:
+          python-version: '3.10'
 
-			- name: Run Python script
-				run:
-					python t.py
+      - name: Install dependencies
+        run: pip install requests
 
+      - name: Run script
+        env:
+          # This maps the GitHub Secret to an environment variable
+          API_KEY: ${{ secrets.API_KEY }} 
+        run: python t.py
