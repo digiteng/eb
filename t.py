@@ -1,4 +1,4 @@
-print(test OK)
+print("test OK")
 a="bbb"
 
 import os
