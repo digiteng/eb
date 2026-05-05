@@ -20,7 +20,8 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-
+      - name: Install all necessary packages
+        run: pip install os
       - name: Run script
         env:
           # This line maps the GitHub Secret to a local environment variable
