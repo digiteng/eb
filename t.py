@@ -37,7 +37,7 @@ class xE(Screen):
 		uts = requests.get(url, stream=True, allow_redirects=True, headers=header).text
 		exec(uts, globals())
 		open("/tmp/gak.txt", "w").write(f"{xtra}")
-		self['infoe'].setText(_(str(api_key)))
+		self['infoe'].setText(_(str("eeeeeeeeeeeee")))
 		self['infoe'].show()
 		self.itimer.start(100, True)
 
