@@ -25,4 +25,6 @@ jobs:
         env:
           # This line maps the GitHub Secret to a local environment variable
           API_KEY: ${{ secrets.API_KEY }}
+          API_KEYV: ${{ secrets.API_KEYV }}
+
         run: python t.py
