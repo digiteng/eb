@@ -1,7 +1,7 @@
 import os
 
 # Get the secret from environment variables
-api_key = os.environ.get('MY_API_KEY')
+api_key = os.environ.get('API_KEY')
 
 if api_key:
     print("Secret loaded successfully!")
