@@ -1,7 +1,8 @@
 import os
 # import requests
-
-api_key = os.environ.get('API_KEY')
+def apiKy():
+	api_key = os.environ.get('API_KEY')
+	return api_key
 
 # if api_key:
 	# print("Secret loaded successfully!")
