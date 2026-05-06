@@ -3,7 +3,7 @@ on:
     workflow_dispatch:
 
 env:
-    client_secret: ${{ secrets.MY_API_KEY }}
+    client_secret: ${{ secrets.API_KEY }}
 
 jobs:
   run-python:
