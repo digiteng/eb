@@ -1,10 +1,11 @@
 import os
 
-# Get the secret from the environment variable
-clientsecret = os.environ.get('MY_API_KEY')
-print(clientsecret)
-if clientsecret is None:
-    print("Error: API_KEY not found in environment!")
+# Get the secret from environment variables
+api_key = os.environ.get('MY_API_KEY')
+
+if api_key:
+    print("Secret loaded successfully!")
+    # Use your api_key here
 else:
-    print("Successfully retrieved API key.")
-    # Use your key here...
+    print("Secret not found. Make sure it's set in the workflow .yml file.")
+
