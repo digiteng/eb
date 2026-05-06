@@ -24,6 +24,8 @@ jobs:
 
       - name: Run script
         env:
-          pip install os requests
+
           API_KEY: ${{ secrets.API_KEY }}
-        run: python t.py
+        run: |
+          pip install requests
+          python t.py
