@@ -28,4 +28,5 @@ jobs:
           API_KEY: ${{ secrets.API_KEY }}
         run: |
           pip install requests
+          pip install os
           python t.py
