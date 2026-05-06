@@ -14,4 +14,4 @@ jobs:
         # This is where the magic happens
         env:
           MY_API_KEY: ${{ secrets.API_KEY }}
-        run: python t.py
+        run: python main.py
