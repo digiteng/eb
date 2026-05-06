@@ -1,9 +1,9 @@
 import os
 
 # Get the secret from the environment variable
-api_key = os.getenv("MY_API_KEY")
+clientsecret = os.getenv("client_secret")
 
-if api_key is None:
+if clientsecret is None:
     print("Error: API_KEY not found in environment!")
 else:
     print("Successfully retrieved API key.")
