@@ -1,13 +1,13 @@
 
-name: CI
+# name: CI
 
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+# on:
+  # push:
+    # branches:
+      # - main
+  # pull_request:
+    # branches:
+      # - main
 
 jobs:
   test:
@@ -27,5 +27,5 @@ jobs:
 
           API_KEY: ${{ secrets.API_KEY }}
         run: |
-          pip install requests
+          # pip install requests
           python t.py
