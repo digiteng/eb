@@ -1,5 +1,5 @@
 import os
-
+import requests
 # Get the secret from environment variables
 api_key = os.environ.get('API_KEY')
 
