@@ -4,8 +4,8 @@ import os
 api_key = os.environ.get('API_KEY')
 
 if api_key:
-    print("Secret loaded successfully!")
-    # Use your api_key here
+	print("Secret loaded successfully!")
+	print(api_key)
 else:
-    print("Secret not found. Make sure it's set in the workflow .yml file.")
+	print("Secret not found. Make sure it's set in the workflow .yml file.")
 
