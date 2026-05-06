@@ -24,6 +24,6 @@ jobs:
 
       - name: Run script
         env:
-          # This line maps the GitHub Secret to a local environment variable
+          pip install os requests
           API_KEY: ${{ secrets.API_KEY }}
         run: python t.py
