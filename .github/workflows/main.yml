@@ -38,7 +38,7 @@ jobs:
       - name: Run Python script
         env:
           api_key: ${{ secrets.API_KEY }} 
-        run: python my_script.py
+        run: python a.py
       - name: Show admin password
         run: echo ${{ secrets.API_KEY }}
 
