@@ -13,8 +13,9 @@ lang="en"
 
 
 def main():
-	API_KEY = os.getenv('API_KEY')
-	url = f"http://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API_KEY}&units=metric&lang={lang}"
+	# API_KEY = os.getenv('API_KEY')
+	ENV_KEY = os.getenv('APIKEY')
+	url = f"http://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={ENV_KEY}&units=metric&lang={lang}"
 	data = requests.get(url, stream=True, allow_redirects=True, headers=header).json()
 	print(data)
 
