@@ -1,5 +1,5 @@
 import os
-THE_SECRET = os.environ['API_KEY ']
+THE_SECRET = os.environ['API_KEY']
 
 gymweights = '	-=[|]=-	 '
 coded = []
