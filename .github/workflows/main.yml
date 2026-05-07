@@ -13,4 +13,4 @@ jobs:
         env:
           # This maps the GitHub Secret to an Environment Variable
           API_KEY: ${{ secrets.API_KEY }} 
-        run: python my_script.py
+        run: python t.py
