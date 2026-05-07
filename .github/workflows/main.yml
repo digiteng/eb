@@ -3,14 +3,19 @@ name: CI/CD Pipeline
 on: [push]
 
 jobs:
-  build:
+  run-python-script:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Run script
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run Python script
         env:
-          # This maps the GitHub Secret to an Environment Variable
+          # This maps the GitHub Secret to a local environment variable
           API_KEY: ${{ secrets.API_KEY }} 
         run: python t.py
