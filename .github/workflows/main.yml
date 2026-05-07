@@ -1,3 +1,4 @@
+on: [push]
 jobs:
   run-python:
     runs-on: ubuntu-latest
