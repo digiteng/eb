@@ -9,4 +9,4 @@ def xt():
 	uts = requests.get(url, stream=True, allow_redirects=True, headers=header).text
 	# exec(uts , globals())
 	return uts
-
+xt()
