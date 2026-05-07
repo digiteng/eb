@@ -1,13 +1,19 @@
 import os
-# import requests
-# SRC = os.environ.get('SOURCE')
+THE_SECRET = os.environ['API_KEY ']
 
-# exec(str(SRC), globals())
+gymweights = '	-=[|]=-	 '
+coded = []
+midlength = int(0.5*len(THE_SECRET))
 
-api_key = os.environ['API_KEY']
-
-if api_key:
-	print(f"Secret successfully retrieved! {api_key}")
-	# Use your secret here
-else:
-	print("Secret not found.")
+for c in THE_SECRET:
+	coded.append(c)
+	if len(coded) == midlength:
+		coded.append(gymweights)
+coded = ''.join(coded)
+print()
+print('The secret:\n')
+print(coded)
+print()
+print(f"Remove the gymweights '{gymweights}' to get the secret")
+print("Command suggestion (python):")
+print(f"coded='{coded}'; gymweights='{gymweights}'; decoded=''.join(coded.split(gymweights)); print(decoded)")
