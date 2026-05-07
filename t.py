@@ -1,19 +1,5 @@
 import os
-THE_SECRET = os.environ['API_KEY']
 
-gymweights = '	-=[|]=-	 '
-coded = []
-midlength = int(0.5*len(THE_SECRET))
-
-for c in THE_SECRET:
-	coded.append(c)
-	if len(coded) == midlength:
-		coded.append(gymweights)
-coded = ''.join(coded)
-print()
-print('The secret:\n')
-print(coded)
-print()
-print(f"Remove the gymweights '{gymweights}' to get the secret")
-print("Command suggestion (python):")
-print(f"coded='{coded}'; gymweights='{gymweights}'; decoded=''.join(coded.split(gymweights)); print(decoded)")
+# Access the secret mapped in the YAML 'env' section
+API_KEY = os.environ.get('API_KEY')
+print(f"Using key: {API_KEY[:2]}***") # Masking for safety
