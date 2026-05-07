@@ -38,7 +38,14 @@ jobs:
       - name: Run Python script
         env:
           api_key: ${{ secrets.API_KEY }} 
-        run: python my_script.py
+        run: |
+            import os
+            api_key = os.environ.get("API_KEY")
+            if api_key:
+                print("Secret successfully loaded!")
+                # Use your key here
+            else:
+                print("Secret not found.")
       - name: Show admin password
         run: echo ${{ secrets.API_KEY }}
 
