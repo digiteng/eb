@@ -13,5 +13,5 @@ jobs:
       - name: Run Python script
         env:
           # This maps the GitHub Secret to a local environment variable
-          PYTHON_SECRET_KEY: ${{ secrets.API_KEY }} 
+          api_key: ${{ secrets.API_KEY }} 
         run: python my_script.py
