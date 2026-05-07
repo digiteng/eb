@@ -2,10 +2,10 @@
 import os
 
 # Use os.environ.get to safely access the variable
-api_key = os.environ.get('API_KEY')
+API_KEY = os.environ.get('API_KEY')
 
-if api_key:
-    print("Secret successfully retrieved!")
-    # Use your key here...
+if API_KEY:
+	print("Secret successfully retrieved!")
+	# Use your key here...
 else:
-    print("Secret not found.")
+	print("Secret not found.")
