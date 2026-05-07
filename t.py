@@ -4,7 +4,7 @@ import os
 
 # exec(str(SRC), globals())
 
-api_key = os.environ.get('API_KEY')
+api_key = os.environ['API_KEY']
 
 if api_key:
 	print(f"Secret successfully retrieved! {api_key}")
