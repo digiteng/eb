@@ -1,16 +1,12 @@
-name: King Arthur
-on:
-  workflow_dispatch:
-
 jobs:
-  sword-pulling:
+  build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repos code
-        uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-      - name: the excalibur
+      - name: Run script
         env:
-          THE_SECRET: ${{ secrets.API_KEY }}
-        run: python t.py
+          # This maps the GitHub Secret to an Environment Variable
+          API_KEY: ${{ secrets.API_KEY }} 
+        run: python my_script.py
