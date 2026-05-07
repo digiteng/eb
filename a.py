@@ -1,7 +1,7 @@
 import os
 import requests
-api_key = os.environ["API_KEY"]
-# api_key = os.getenv('API_KEY')
+# api_key = os.environ.get("API_KEY")
+api_key = os.getenv('API_KEY')
 header = {"User-Agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"}
 # api_key="edd1f597c6e64095cbed56dcac471f49"
 lat="36.9"
