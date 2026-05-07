@@ -24,9 +24,12 @@
 
 
 name: secrets
+# on:
+  # workflow_dispatch:
 on:
-  workflow_dispatch:
-
+  push:
+    branches:
+      - main
 jobs:
   run-script:
     runs-on: ubuntu-latest
@@ -43,7 +46,7 @@ jobs:
         env:
           api_key: ${{ secrets.API_KEY }} 
         run: | 
-            pip istall requests
+            pip install requests
             python a.py
 
       - name: Show admin password
