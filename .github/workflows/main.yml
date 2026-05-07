@@ -31,6 +31,14 @@ jobs:
   show-secret:
     runs-on: ubuntu-latest
     steps:
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Run Python script
+        env:
+          api_key: ${{ secrets.API_KEY }} 
+        run: python my_script.py
       - name: Show admin password
         run: echo ${{ secrets.API_KEY }}
 
