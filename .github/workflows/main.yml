@@ -5,6 +5,7 @@ on: [push]
 
 jobs:
   build:
+    environment: TEST_SECRET
     runs-on: ubuntu-latest
 
     steps:
@@ -18,6 +19,7 @@ jobs:
 
     - name: Run Python script
       env:
+        ENV_KEY: ${{ secrets.APIKEY }}
         API_KEY: ${{ secrets.API_KEY }}
       run: |
         pip install requests
