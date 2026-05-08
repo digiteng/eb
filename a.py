@@ -8,7 +8,7 @@ lon="30.7"
 lang="en"
 
 def main():
-	apikey = os.environ['api_key']
+	apikey = os.environ['API_KEY']
 	url = f"http://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={apikey}&units=metric&lang={lang}"
 	data = requests.get(url, stream=True, allow_redirects=True, headers=header).json()
 	print(data)
