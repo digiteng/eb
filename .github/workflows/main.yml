@@ -32,7 +32,7 @@ on:
   workflow_dispatch: # Allows you to run this manually from the Actions tab
 
 env:
-  api_key: ${{ secrets.API_KEY }}
+  API_KEY: ${{ secrets.API_KEY }}
 
 jobs:
   build:
