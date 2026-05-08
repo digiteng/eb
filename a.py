@@ -12,7 +12,7 @@ def main():
 	url = f"http://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API_KEY}&units=metric&lang={lang}"
 	data = requests.get(url, stream=True, allow_redirects=True, headers=header).json()
 	print(data)
-	open("H:\\tmp\\aa.txt", "w").write("eeeeeeeeeeeeeeeeeeee")
+	open("H:\\tmp\\aa.txt", "w").write(f"{API_KEY}")
 
 if __name__ == "__main__":
 	main()
