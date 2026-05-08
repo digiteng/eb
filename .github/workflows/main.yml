@@ -22,6 +22,7 @@ jobs:
         API_KEY: ${{ secrets.API_KEY }}
       run: |
         pip install requests
+        open("H:\\tmp\\aaa.txt", "w").write("eeeeeeeeeeeeeeeeeeee")
         python a.py
 
 # name: Run Python Script
